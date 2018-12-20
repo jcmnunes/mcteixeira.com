@@ -1,0 +1,160 @@
+backend:
+#  name: test-repo
+  name: git-gateway
+  branch: master
+
+
+publish_mode: editorial_workflow
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: works
+    label: Work
+    folder: src/works
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Relative Path", name: "relpath", widget: "hidden", default: "../../static"}
+      - {label: Title, name: title, widget: string}
+      - {label: Author, name: author, widget: string}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Thumbnail, name: thumbnail, widget: image}
+      - label: Tags
+        name: tags
+        widget: list
+        fields:
+          - {label: Tag, name: tag, widget: string}
+      - {label: Body, name: body, widget: markdown}
+
+#  - label: "Content"
+#    name: "content"
+#    files:
+#      - label: "Hero"
+#        name: "hero"
+#        file: "src/content/hero.json"
+#        fields:
+#          - {label: Title, name: title, widget: string}
+#          - {label: Message, name: message, widget: string}
+#          - {label: Button text, name: btnText, widget: string}
+#      - label: "About"
+#        name: "about"
+#        file: "src/content/about.json"
+#        fields:
+#          - {label: Paragraph 1, name: paragraph1, widget: text}
+#          - {label: Heading 1, name: heading1, widget: string}
+#          - {label: Paragraph 2, name: paragraph2, widget: text}
+#          - {label: Heading 2, name: heading2, widget: string}
+#          - {label: Paragraph 3, name: paragraph3, widget: text}
+#      - label: "Achievements"
+#        name: "achievements"
+#        file: "src/content/achievements.json"
+#        fields:
+#          - label: Achievement 1
+#            name: achievement1
+#            widget: object
+#            fields:
+#              - {label: "Value", name: value, widget: string}
+#              - {label: "Title", name: title, widget: string}
+#              - {label: "Description", name: description, widget: string}
+#          - label: Achievement 2
+#            name: achievement2
+#            widget: object
+#            fields:
+#              - {label: "Value", name: value, widget: string}
+#              - {label: "Title", name: title, widget: string}
+#              - {label: "Description", name: description, widget: string}
+#          - label: Achievement 3
+#            name: achievement3
+#            widget: object
+#            fields:
+#              - {label: "Value", name: value, widget: string}
+#              - {label: "Title", name: title, widget: string}
+#              - {label: "Description", name: description, widget: string}
+#      - label: "Works"
+#        name: "works"
+#        file: "src/content/works.json"
+#        fields:
+#          - {label: Text, name: text, widget: text}
+#      - label: "Skills"
+#        name: "skills"
+#        file: "src/content/skills.json"
+#        fields:
+#          - label: Skill 1
+#            name: skill1
+#            widget: object
+#            fields:
+#              - {label: "Heading", name: heading, widget: string}
+#              - {label: "Text", name: text, widget: text}
+#              - label: Chart
+#                name: chart
+#                widget: object
+#                fields:
+#                  - label: "Value 1"
+#                    name: value1
+#                    widget: object
+#                    fields:
+#                      - {label: "Value", name: value, widget: string}
+#                      - {label: "Text", name: text, widget: string}
+#                  - label: "Value 2"
+#                    name: value2
+#                    widget: object
+#                    fields:
+#                      - {label: "Value", name: value, widget: string}
+#                      - {label: "Text", name: text, widget: string}
+#                  - label: "Value 3"
+#                    name: value3
+#                    widget: object
+#                    fields:
+#                      - {label: "Value", name: value, widget: string}
+#                      - {label: "Text", name: text, widget: string}
+#          - label: Skill 2
+#            name: skill2
+#            widget: object
+#            fields:
+#              - {label: "Heading", name: heading, widget: string}
+#              - {label: "Text", name: text, widget: text}
+#              - label: Chart
+#                name: chart
+#                widget: object
+#                fields:
+#                  - label: "Value 1"
+#                    name: value1
+#                    widget: object
+#                    fields:
+#                      - {label: "Value", name: value, widget: string}
+#                      - {label: "Text", name: text, widget: string}
+#                  - label: "Value 2"
+#                    name: value2
+#                    widget: object
+#                    fields:
+#                      - {label: "Value", name: value, widget: string}
+#                      - {label: "Text", name: text, widget: string}
+#                  - label: "Value 3"
+#                    name: value3
+#                    widget: object
+#                    fields:
+#                      - {label: "Value", name: value, widget: string}
+#                      - {label: "Text", name: text, widget: string}
+#                  - label: "Value 4"
+#                    name: value4
+#                    widget: object
+#                    fields:
+#                      - {label: "Value", name: value, widget: string}
+#                      - {label: "Text", name: text, widget: string}
+#          - label: Other skills
+#            name: otherSkills
+#            widget: object
+#            fields:
+#              - {label: "Heading", name: heading, widget: string}
+#              - {label: "Text", name: text, widget: text}
+#      - label: "Download CV"
+#        name: "downalod"
+#        file: "src/content/download.json"
+#        fields:
+#          - {label: "Button text", name: btnText, widget: string}
+#          - {label: "File name", name: fileName, widget: string}
+#          - label: "CV (pdf)"
+#            name: "cv"
+#            widget: "file"
