@@ -26,8 +26,9 @@ const Homepage = ({ children }) => (
         <ThemeProvider theme={theme}>
           <div>
             <Header />
-            <div>{children}</div>
+            <div style={{ marginTop: 60 }}>{children}</div>
             <GlobalStyle />
+            <div id="menu-root" />
           </div>
         </ThemeProvider>
       </>

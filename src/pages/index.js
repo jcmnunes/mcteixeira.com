@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
+import { Element } from 'react-scroll';
 
 import HomepageLayout from '../layouts/Homepage';
 import Hero from '../components/Hero';
@@ -79,48 +80,60 @@ const StyledFooter = styled.footer`
 
 export default props => (
   <HomepageLayout>
-    <Hero />
-    <WorksSection>
-      <Container>
-        <h2>My Latest Work</h2>
-        <Works works={props.data.works} />
-      </Container>
-    </WorksSection>
-    <Section>
-      <Container>
-        <h2>About Me</h2>
-        <Abouts />
-      </Container>
-    </Section>
-    <AchievementsSection>
-      <div className="header">
-        <h2>Achievements</h2>
-      </div>
-      <div className="body">
+    <Element name="home">
+      <Hero />
+    </Element>
+    <Element name="work">
+      <WorksSection>
         <Container>
-          <Achievements />
+          <h2>My Latest Work</h2>
+          <Works works={props.data.works} />
         </Container>
-      </div>
-    </AchievementsSection>
-    <Section>
-      <SkillsContainer>
-        <div>
-          <h2>Skills</h2>
-          <p>
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus,
-            porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Nullam quis risus eget
-            urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum.{' '}
-          </p>
+      </WorksSection>
+    </Element>
+    <Element name="about">
+      <Section>
+        <Container>
+          <h2>About Me</h2>
+          <Abouts />
+        </Container>
+      </Section>
+    </Element>
+    <Element name="achievements">
+      <AchievementsSection>
+        <div className="header">
+          <h2>Achievements</h2>
         </div>
-        <Skills />
-      </SkillsContainer>
-    </Section>
-    <FormSection>
-      <FormContainer>
-        <h2>Get in Touch</h2>
-        <ContactForm />
-      </FormContainer>
-    </FormSection>
+        <div className="body">
+          <Container>
+            <Achievements />
+          </Container>
+        </div>
+      </AchievementsSection>
+    </Element>
+    <Element name="skills">
+      <Section>
+        <SkillsContainer>
+          <div>
+            <h2>Skills</h2>
+            <p>
+              Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus,
+              porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Nullam quis risus
+              eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum.{' '}
+            </p>
+          </div>
+          <Skills />
+        </SkillsContainer>
+      </Section>
+    </Element>
+    <Element name="contact">
+      <FormSection>
+        <FormContainer>
+          <h2>Get in Touch</h2>
+          <ContactForm />
+        </FormContainer>
+      </FormSection>
+    </Element>
     <StyledFooter>
       <Container>
         © 2018 MCT - Maria Teixeira. Made with{' '}
