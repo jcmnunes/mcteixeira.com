@@ -58,7 +58,7 @@ const Button = styled.button`
 class ContactForm extends Component {
   render() {
     return (
-      <StyledForm name="contact" method="POST" data-netlify="false">
+      <StyledForm name="contact" method="POST" data-netlify="true">
         <div className="name-row">
           <div className="input-group">
             <label>First name:</label>
