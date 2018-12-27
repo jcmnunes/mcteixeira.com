@@ -117,7 +117,7 @@ class ContactForm extends Component {
         </div>
         <div className="input-group">
           <label>Message:</label>
-          <textarea rows="6" name="subject" onChange={this.handleChange} required />
+          <textarea rows="6" name="message" onChange={this.handleChange} required />
         </div>
         <div className="button-container">
           <Button type="submit">Send message</Button>
