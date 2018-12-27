@@ -31,6 +31,30 @@ export default {
   supporting800: '#870557',
   supporting900: '#610042',
 
+  // Success
+  success100: '#E3F9E5',
+  success200: '#C1EAC5',
+  success300: '#A3D9A5',
+  success400: '#7BC47F',
+  success500: '#57AE5B',
+  success600: '#3F9142',
+  success700: '#2F8132',
+  success800: '#207227',
+  success900: '#0E5814',
+  success1000: '#05400A',
+
+  // Error
+  error100: '#FFEEEE',
+  error200: '#FACDCD',
+  error300: '#F29B9B',
+  error400: '#E66A6A',
+  error500: '#D64545',
+  error600: '#BA2525',
+  error700: '#A61B1B',
+  error800: '#911111',
+  error900: '#780A0A',
+  error1000: '#610404',
+
   /* Shadows */
   shadow100: '0 1px 3px hsla(0, 0%, 0%, .12), 0 1px 2px hsla(0, 0%, 0%, .24)',
   shadow300: '0 3px 6px hsla(0, 0%, 0%, .15), 0 2px 4px hsla(0, 0%, 0%, .12)',
