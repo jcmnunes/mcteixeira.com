@@ -77,6 +77,7 @@ class ContactForm extends Component {
           <label>Message:</label>
           <textarea rows="6" name="subject" />
         </div>
+        <input type="hidden" name="bot-field" />
         <div className="button-container">
           <Button type="submit">Send message</Button>
         </div>
