@@ -169,10 +169,14 @@ class MenuPortal extends React.Component {
   componentDidMount() {
     this.setState({ mounted: true });
   }
+
   render() {
-    const portalNode = document.getElementById('menu-root');
-    const overlayNode = this.props.children;
-    return this.state.mounted && ReactDOM.createPortal(overlayNode, portalNode);
+    if (this.state.mounted) {
+      const portalNode = document.getElementById('menu-root');
+      const overlayNode = this.props.children;
+      return ReactDOM.createPortal(overlayNode, portalNode);
+    }
+    return null;
   }
 }
 
