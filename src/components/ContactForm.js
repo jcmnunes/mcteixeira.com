@@ -121,7 +121,7 @@ class ContactForm extends Component {
         name="contact"
         method="POST"
         data-netlify="true"
-        netlify-honeypot="bot-field"
+        data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
