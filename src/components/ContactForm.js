@@ -102,7 +102,12 @@ class ContactForm extends Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...this.state,
+        'bot-field': this.state['bot-field'],
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        subject: this.state.subject,
+        message: this.state.message,
       }),
     })
       .then(() => this.setState({ ...this.initialState, submitted: true }))
