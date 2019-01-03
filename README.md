@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/jcmnunes/mct/master/favicon.png" width="100px" height="100px">
+<img src="https://raw.githubusercontent.com/jcmnunes/mct/master/src/favicon.png" width="100px" height="100px">
 
 # M. C. Teixeira - Personal website
 
