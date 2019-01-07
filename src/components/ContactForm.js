@@ -58,7 +58,7 @@ const Button = styled.button`
 class ContactForm extends Component {
   render() {
     return (
-      <StyledForm action="https://formspree.io/josenunes34@gmail.com" method="POST">
+      <StyledForm action="https://formspree.io/mceuteixeira1@gmail.com" method="POST">
         <div className="name-row">
           <div className="input-group">
             <label>First name:</label>
