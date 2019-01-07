@@ -10,6 +10,7 @@ import Abouts from '../components/Abouts';
 import Achievements from '../components/Achievements';
 import Skills from '../components/Skills';
 import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
 
 import Container from '../styles/Container';
 import Section from '../styles/Section';
@@ -58,24 +59,6 @@ const SkillsContainer = styled(Container)`
 const FormContainer = styled(Container)`
   text-align: center;
   max-width: 624px;
-`;
-
-const StyledFooter = styled.footer`
-  font-size: 14px;
-  color: ${props => props.theme.neutral400};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 96px;
-
-  a {
-    color: ${props => props.theme.neutral500};
-    text-decoration: underline;
-
-    &:hover {
-      color: ${props => props.theme.neutral600};
-    }
-  }
 `;
 
 export default props => (
@@ -134,19 +117,7 @@ export default props => (
         </FormContainer>
       </FormSection>
     </Element>
-    <StyledFooter>
-      <Container>
-        © 2018 MCT - Maria Teixeira. Made with{' '}
-        <span role="img" aria-label="heart emoji">
-          ❤️
-        </span>{' '}
-        and{' '}
-        <span role="img" aria-label="coffee emoji">
-          ☕️
-        </span>{' '}
-        by Jose Nunes (<a href="https://www.josenunes.xyz/">josenunes.xyz</a>)
-      </Container>
-    </StyledFooter>
+    <Footer />
   </HomepageLayout>
 );
 

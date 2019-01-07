@@ -2,7 +2,7 @@
 
 # M. C. Teixeira - Personal website
 
-This is the personal website of M. C. Teixeira ([mcteixeira.com](http://mcteixeira.com/)).
+This is the personal website of M. C. Teixeira ([mcteixeira.com](https://mcteixeira.com/)).
 
 This site is a [Gatsby](https://www.gatsbyjs.org/) blog with [Netlify](https://www.netlify.com)
 hosting.
