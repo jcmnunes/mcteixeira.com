@@ -58,14 +58,7 @@ const Button = styled.button`
 class ContactForm extends Component {
   render() {
     return (
-      <StyledForm
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <input type="hidden" name="bot-field" />
+      <StyledForm action="https://formspree.io/josenunes34@gmail.com" method="POST">
         <div className="name-row">
           <div className="input-group">
             <label>First name:</label>
@@ -78,7 +71,7 @@ class ContactForm extends Component {
         </div>
         <div className="input-group">
           <label>Email:</label>
-          <input type="email" name="email" required />
+          <input type="email" name="_replyto" required />
         </div>
         <div className="input-group">
           <label>Subject:</label>
